@@ -10,22 +10,20 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/master_bg"
-        android:alpha="0.9"
-        >
+        android:alpha="0.5"
+        android:background="@drawable/master_bg">
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="350dp"
-            android:background="@drawable/home_bg"
-            />
+            android:layout_height="match_parent"
+            android:background="@drawable/home_bg" />
 
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
+
         <TextView
             android:id="@+id/txtView"
             android:layout_width="match_parent"
@@ -38,7 +36,7 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/txtView"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
@@ -55,7 +53,9 @@
                     android:layout_height="150dp"
                     android:layout_margin="10dp"
                     android:background="@drawable/home_card_bg1"
-                    android:elevation="10dp">
+                    android:elevation="10dp"
+                    android:alpha="0.8"
+                    >
 
                     <TextView
                         android:id="@+id/txtHead1"
@@ -64,7 +64,7 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="20dp"
                         android:layout_marginRight="20dp"
-                        android:text="Picture Fun"
+                        android:text="Dialog Fun"
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -77,9 +77,20 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginRight="20dp"
-                        android:text="Find movie from picture"
+                        android:text="Find movie from dialog"
                         android:textColor="#545454"
                         android:textSize="14sp" />
+
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/lottieRefresh1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="10dp"
+                        android:visibility="gone"
+                        app:lottie_fileName="refreshh.json" />
 
                     <TextView
                         android:id="@+id/txtViewStatus1"
@@ -88,6 +99,7 @@
                         android:layout_alignParentBottom="true"
                         android:layout_margin="5dp"
                         android:layout_toLeftOf="@+id/cardview1"
+                        android:layout_toRightOf="@+id/lottieRefresh1"
                         android:gravity="right|center"
                         android:text="You are at level 1"
                         android:textColor="#545454"
@@ -120,7 +132,9 @@
                     android:layout_height="150dp"
                     android:layout_margin="10dp"
                     android:background="@drawable/home_card_bg2"
-                    android:elevation="10dp">
+                    android:elevation="10dp"
+                    android:alpha="0.8"
+                    >
 
                     <TextView
                         android:id="@+id/txtHead2"
@@ -129,7 +143,7 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="20dp"
                         android:layout_marginRight="20dp"
-                        android:text="Dialog Fun"
+                        android:text="Music Fun"
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -141,9 +155,19 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginRight="20dp"
-                        android:text="Find movie from dialog"
+                        android:text="Find movie from music"
                         android:textColor="#545454"
                         android:textSize="14sp" />
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/lottieRefresh2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="10dp"
+                        android:visibility="gone"
+                        app:lottie_fileName="refreshh.json" />
 
                     <TextView
                         android:id="@+id/txtViewStatus2"
@@ -152,6 +176,7 @@
                         android:layout_alignParentBottom="true"
                         android:layout_margin="5dp"
                         android:layout_toLeftOf="@+id/cardview2"
+                        android:layout_toRightOf="@+id/lottieRefresh2"
                         android:gravity="right|center"
                         android:text="You are at level 1"
                         android:textColor="#545454"
@@ -187,7 +212,9 @@
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="20dp"
                     android:background="@drawable/home_card_bg3"
-                    android:elevation="10dp">
+                    android:elevation="10dp"
+                    android:alpha="0.8"
+                    >
 
                     <TextView
                         android:id="@+id/txtHead3"
@@ -196,7 +223,7 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="20dp"
                         android:layout_marginRight="20dp"
-                        android:text="Music Fun"
+                        android:text="Picture Fun"
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -208,9 +235,19 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginRight="20dp"
-                        android:text="Find movie from bgm"
+                        android:text="Find movie from picture"
                         android:textColor="#545454"
                         android:textSize="14sp" />
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/lottieRefresh3"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="10dp"
+                        android:visibility="gone"
+                        app:lottie_fileName="refreshh.json" />
 
                     <TextView
                         android:id="@+id/txtViewStatus3"
@@ -219,6 +256,7 @@
                         android:layout_alignParentBottom="true"
                         android:layout_margin="5dp"
                         android:layout_toLeftOf="@+id/cardview3"
+                        android:layout_toRightOf="@+id/lottieRefresh3"
                         android:gravity="right|center"
                         android:text="You are at level 1"
                         android:textColor="#545454"
@@ -249,6 +287,46 @@
             </LinearLayout>
 
         </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/layoutShare"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/share_button_home">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="share.json"
+                app:lottie_loop="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone"
+            android:background="#10000000"
+            >
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/avilayoutProgress"
+                style="@style/AVLoadingIndicatorView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:indicatorColor="@color/white"
+                app:indicatorName="BallPulseIndicator" />
+
+        </LinearLayout>
 
     </RelativeLayout>
 

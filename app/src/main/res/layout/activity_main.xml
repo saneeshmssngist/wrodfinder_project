@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context="saneesh.moviefun.worldfinder.activities.WordFinderActivity">
+    tools:context="saneesh.moviefun.wordfinder.activities.WordFinderActivity">
 
     <FrameLayout
         android:id="@+id/frameLayout"
@@ -29,9 +29,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginBottom="45dp" />
+                android:layout_marginBottom="15dp"
+                />
 
 
         </android.support.v7.widget.CardView>
@@ -63,9 +64,9 @@
                     android:id="@+id/txtViewQuestionNumber"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:padding="2dp"
                     android:alpha="0.5"
                     android:gravity="center"
+                    android:padding="2dp"
                     android:text="Level 12"
                     android:textColor="@color/black"
                     android:textSize="13sp"
@@ -73,13 +74,26 @@
 
             </RelativeLayout>
 
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/lottiePlay"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                app:lottie_fileName="play_pause.json"
-                android:layout_gravity="bottom"
-                />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:cardCornerRadius="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal"
+                app:cardBackgroundColor="#e4e3e3"
+                >
+
+                <ImageView
+                    android:id="@+id/imagPlay"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_stop_arrow"
+                    android:layout_gravity="center"
+                    />
+
+            </android.support.v7.widget.CardView>
+
         </LinearLayout>
 
         <com.airbnb.lottie.LottieAnimationView
@@ -90,44 +104,74 @@
             app:lottie_autoPlay="true"
             app:lottie_fileName="voice_recognition.json"
             app:lottie_loop="true"
-            />
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1.5"
-        android:orientation="vertical"
-        >
+            android:visibility="gone"/>
 
         <RelativeLayout
-            android:id="@+id/clueLayout"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/question_number_bg">
+            android:id="@+id/layoutLoadingAudio"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="visible"
+            >
 
             <TextView
-                android:id="@+id/txtClue1"
+                android:id="@+id/texttt"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:alpha="0.5"
+                android:layout_height="wrap_content"
+                android:text="Loading Audio..."
+                android:textColor="@color/black_light"
+                android:textSize="14sp"
+                android:layout_centerInParent="true"
                 android:gravity="center"
-                android:text="Help"
-                android:textColor="@color/black"
-                android:textSize="13sp"
-                android:textStyle="bold" />
+                />
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieLoadingAudio"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/texttt"
+                android:layout_weight="2"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="loading_audio.json"
+                app:lottie_loop="true" />
 
         </RelativeLayout>
 
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/lottieRefresh"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            app:lottie_fileName="refreshh.json"
-            android:layout_gravity="bottom"
-            />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:orientation="vertical">
 
-    </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/clueLayout"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/question_number_bg">
+
+                <TextView
+                    android:id="@+id/txtClue1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.5"
+                    android:gravity="center"
+                    android:text="Help"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieRefresh"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="bottom"
+                app:lottie_fileName="refreshh.json" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
@@ -136,10 +180,9 @@
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:background="@color/orange_light"
-        android:padding="10dp"
-        android:visibility="visible"
         android:orientation="horizontal"
-        >
+        android:padding="10dp"
+        android:visibility="visible">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -158,9 +201,9 @@
                     android:id="@+id/txtViewQuestionNumber2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:padding="2dp"
                     android:alpha="0.5"
                     android:gravity="center"
+                    android:padding="2dp"
                     android:text="Level 12"
                     android:textColor="@color/black"
                     android:textSize="13sp"
@@ -169,14 +212,15 @@
             </RelativeLayout>
 
         </LinearLayout>
+
         <android.support.v7.widget.CardView
             android:id="@+id/cardViewImg"
             android:layout_width="0dp"
             android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="3"
-            android:layout_centerHorizontal="true"
             app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="10dp">
 
@@ -205,8 +249,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:id="@+id/clueLayout2"
@@ -231,10 +274,8 @@
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/lottieRefresh2"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
-                app:lottie_fileName="refreshh.json"
-                android:layout_gravity="bottom"
-                />
+                android:layout_height="60dp"
+                app:lottie_fileName="refreshh.json" />
 
         </LinearLayout>
 
@@ -247,19 +288,21 @@
         android:paddingTop="120dp"
         app:alignContent="flex_start"
         app:alignItems="flex_start"
-        app:flexWrap="wrap"></com.google.android.flexbox.FlexboxLayout>
+        app:flexWrap="wrap"
+        />
 
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adMobView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom"
         android:layout_marginLeft="60dp"
         android:layout_marginRight="60dp"
         app:adSize="BANNER"
         app:adUnitId="@string/BANNERID"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="bottom"
+        android:visibility="gone"
         />
 
     <TextView

@@ -1,33 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="saneesh.moviefun.worldfinder">
-
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
+    package="saneesh.moviefun.wordfinder">
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/movie_fun"
+        android:icon="@mipmap/movie_fun_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/movie_fun"
+        android:roundIcon="@mipmap/movie_fun_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="saneesh.moviefun.worldfinder.activities.SplashScreenActivity"
+        <activity android:name=".activities.LevelSelectionActivity"
             android:screenOrientation="portrait"
-            >
+            />
+
+        <activity
+            android:name=".activities.SplashScreenActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="saneesh.moviefun.worldfinder.activities.WordFinderActivity"
-            android:screenOrientation="portrait"
-            />
-        <activity android:name="saneesh.moviefun.worldfinder.activities.HomeActivity"
-            android:screenOrientation="portrait"
-            />
-        <activity android:name="saneesh.moviefun.worldfinder.activities.BaseActivity"></activity>
+        <activity
+            android:name=".activities.WordFinderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.BaseActivity" />
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 </manifest>

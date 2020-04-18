@@ -8,6 +8,8 @@
     <color name="grey">#b1b1b1</color>
     <color name="blue">#00bcd4</color>
     <color name="red">#f10d06</color>
+    <color name="blue_light">#56C3CF</color>
+    <color name="blue_dark1">#36497a</color>
 
     <color name="blue_dark">#ff6835</color>
     <color name="orange_light">#ff9875</color>
@@ -22,5 +24,8 @@
     <color name="orane_light1">#f59e3f</color>
     <color name="orane_light2">#f3803c</color>
     <color name="orane_light3">#f5703d</color>
+
+    <color name="inner_grey">#989CA5</color>
+    <color name="outter_grey">#323c53</color>
 
 </resources>
